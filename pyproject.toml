@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "battery-tray"
+version = "1.0.0"
+description = "在 Windows 任务栏显示 2.4G 无线外设电量"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+keywords = ["windows", "taskbar", "battery", "hid", "2.4g", "mouse"]
+
+[project.scripts]
+battery-tray = "battery_tray.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+battery_tray = ["py.typed"]
